@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "module": "amd",
+    "module": "commonjs",
     "target": "esnext",
     "sourceMap": true,
-    "outFile": "index.js",
+//    "outFile": "index.js",
     "declaration": true
   },
   "exclude": [
