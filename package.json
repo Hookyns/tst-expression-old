@@ -1,5 +1,5 @@
 {
-  "name": "exprtree",
+  "name": "js-expr-tree",
   "version": "1.0.0",
   "description": "Base runtime package for typescript expression transformer",
   "main": "index.js",
