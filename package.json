@@ -1,0 +1,25 @@
+{
+  "name": "exprtree",
+  "version": "1.0.0",
+  "description": "Base runtime package for typescript expression transformer",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "declarations.d.ts"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "expression",
+    "typescript",
+    "transformer",
+    "plugin",
+    "javascript",
+    "runtime"
+  ],
+  "author": "Roman Jámbor",
+  "license": "MIT"
+}

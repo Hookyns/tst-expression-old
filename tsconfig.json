@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "amd",
+    "target": "esnext",
+    "sourceMap": true,
+    "outFile": "index.js",
+    "declaration": true
+  },
+  "exclude": [
+    "node_modules",
+    ".idea"
+  ]
+}
