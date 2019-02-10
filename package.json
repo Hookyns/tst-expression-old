@@ -1,6 +1,6 @@
 {
   "name": "js-expr-tree",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Base runtime package for typescript expression transformer",
   "main": "index.js",
   "types": "index.d.ts",
