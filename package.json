@@ -4,6 +4,7 @@
   "description": "Base runtime package for typescript expression transformer",
   "main": "index.js",
   "types": "index.d.ts",
+  "repository": "https://github.com/Hookyns/exprtree",
   "files": [
     "index.js",
     "index.d.ts",
