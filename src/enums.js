@@ -349,4 +349,58 @@ var ExpressionKind;
     ExpressionKind[ExpressionKind["FirstJSDocTagNode"] = 294] = "FirstJSDocTagNode";
     ExpressionKind[ExpressionKind["LastJSDocTagNode"] = 305] = "LastJSDocTagNode";
 })(ExpressionKind = exports.ExpressionKind || (exports.ExpressionKind = {}));
-//# sourceMappingURL=expression-kind.js.map
+var NodeFlags;
+(function (NodeFlags) {
+    // noinspection JSUnusedGlobalSymbols
+    NodeFlags[NodeFlags["None"] = 0] = "None";
+    NodeFlags[NodeFlags["Let"] = 1] = "Let";
+    NodeFlags[NodeFlags["Const"] = 2] = "Const";
+    NodeFlags[NodeFlags["NestedNamespace"] = 4] = "NestedNamespace";
+    NodeFlags[NodeFlags["Synthesized"] = 8] = "Synthesized";
+    NodeFlags[NodeFlags["Namespace"] = 16] = "Namespace";
+    NodeFlags[NodeFlags["ExportContext"] = 32] = "ExportContext";
+    NodeFlags[NodeFlags["ContainsThis"] = 64] = "ContainsThis";
+    NodeFlags[NodeFlags["HasImplicitReturn"] = 128] = "HasImplicitReturn";
+    NodeFlags[NodeFlags["HasExplicitReturn"] = 256] = "HasExplicitReturn";
+    NodeFlags[NodeFlags["GlobalAugmentation"] = 512] = "GlobalAugmentation";
+    NodeFlags[NodeFlags["HasAsyncFunctions"] = 1024] = "HasAsyncFunctions";
+    NodeFlags[NodeFlags["DisallowInContext"] = 2048] = "DisallowInContext";
+    NodeFlags[NodeFlags["YieldContext"] = 4096] = "YieldContext";
+    NodeFlags[NodeFlags["DecoratorContext"] = 8192] = "DecoratorContext";
+    NodeFlags[NodeFlags["AwaitContext"] = 16384] = "AwaitContext";
+    NodeFlags[NodeFlags["ThisNodeHasError"] = 32768] = "ThisNodeHasError";
+    NodeFlags[NodeFlags["JavaScriptFile"] = 65536] = "JavaScriptFile";
+    NodeFlags[NodeFlags["ThisNodeOrAnySubNodesHasError"] = 131072] = "ThisNodeOrAnySubNodesHasError";
+    NodeFlags[NodeFlags["HasAggregatedChildData"] = 262144] = "HasAggregatedChildData";
+    NodeFlags[NodeFlags["JSDoc"] = 2097152] = "JSDoc";
+    NodeFlags[NodeFlags["JsonFile"] = 16777216] = "JsonFile";
+    NodeFlags[NodeFlags["BlockScoped"] = 3] = "BlockScoped";
+    NodeFlags[NodeFlags["ReachabilityCheckFlags"] = 384] = "ReachabilityCheckFlags";
+    NodeFlags[NodeFlags["ReachabilityAndEmitFlags"] = 1408] = "ReachabilityAndEmitFlags";
+    NodeFlags[NodeFlags["ContextFlags"] = 12679168] = "ContextFlags";
+    NodeFlags[NodeFlags["TypeExcludesFlags"] = 20480] = "TypeExcludesFlags";
+})(NodeFlags = exports.NodeFlags || (exports.NodeFlags = {}));
+var ModifierFlags;
+(function (ModifierFlags) {
+    // noinspection JSUnusedGlobalSymbols
+    ModifierFlags[ModifierFlags["None"] = 0] = "None";
+    ModifierFlags[ModifierFlags["Export"] = 1] = "Export";
+    ModifierFlags[ModifierFlags["Ambient"] = 2] = "Ambient";
+    ModifierFlags[ModifierFlags["Public"] = 4] = "Public";
+    ModifierFlags[ModifierFlags["Private"] = 8] = "Private";
+    ModifierFlags[ModifierFlags["Protected"] = 16] = "Protected";
+    ModifierFlags[ModifierFlags["Static"] = 32] = "Static";
+    ModifierFlags[ModifierFlags["Readonly"] = 64] = "Readonly";
+    ModifierFlags[ModifierFlags["Abstract"] = 128] = "Abstract";
+    ModifierFlags[ModifierFlags["Async"] = 256] = "Async";
+    ModifierFlags[ModifierFlags["Default"] = 512] = "Default";
+    ModifierFlags[ModifierFlags["Const"] = 2048] = "Const";
+    ModifierFlags[ModifierFlags["HasComputedFlags"] = 536870912] = "HasComputedFlags";
+    ModifierFlags[ModifierFlags["AccessibilityModifier"] = 28] = "AccessibilityModifier";
+    ModifierFlags[ModifierFlags["ParameterPropertyModifier"] = 92] = "ParameterPropertyModifier";
+    ModifierFlags[ModifierFlags["NonPublicAccessibilityModifier"] = 24] = "NonPublicAccessibilityModifier";
+    ModifierFlags[ModifierFlags["TypeScriptModifier"] = 2270] = "TypeScriptModifier";
+    ModifierFlags[ModifierFlags["ExportDefault"] = 513] = "ExportDefault";
+    ModifierFlags[ModifierFlags["All"] = 3071] = "All";
+})(ModifierFlags = exports.ModifierFlags || (exports.ModifierFlags = {}));
+//# sourceMappingURL=enums.js.map

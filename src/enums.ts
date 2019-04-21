@@ -347,3 +347,57 @@ export enum ExpressionKind
 	FirstJSDocTagNode = 294,
 	LastJSDocTagNode = 305
 }
+
+export enum NodeFlags {
+	// noinspection JSUnusedGlobalSymbols
+	None = 0,
+	Let = 1,
+	Const = 2,
+	NestedNamespace = 4,
+	Synthesized = 8,
+	Namespace = 16,
+	ExportContext = 32,
+	ContainsThis = 64,
+	HasImplicitReturn = 128,
+	HasExplicitReturn = 256,
+	GlobalAugmentation = 512,
+	HasAsyncFunctions = 1024,
+	DisallowInContext = 2048,
+	YieldContext = 4096,
+	DecoratorContext = 8192,
+	AwaitContext = 16384,
+	ThisNodeHasError = 32768,
+	JavaScriptFile = 65536,
+	ThisNodeOrAnySubNodesHasError = 131072,
+	HasAggregatedChildData = 262144,
+	JSDoc = 2097152,
+	JsonFile = 16777216,
+	BlockScoped = 3,
+	ReachabilityCheckFlags = 384,
+	ReachabilityAndEmitFlags = 1408,
+	ContextFlags = 12679168,
+	TypeExcludesFlags = 20480
+}
+
+export enum ModifierFlags {
+	// noinspection JSUnusedGlobalSymbols
+	None = 0,
+	Export = 1,
+	Ambient = 2,
+	Public = 4,
+	Private = 8,
+	Protected = 16,
+	Static = 32,
+	Readonly = 64,
+	Abstract = 128,
+	Async = 256,
+	Default = 512,
+	Const = 2048,
+	HasComputedFlags = 536870912,
+	AccessibilityModifier = 28,
+	ParameterPropertyModifier = 92,
+	NonPublicAccessibilityModifier = 24,
+	TypeScriptModifier = 2270,
+	ExportDefault = 513,
+	All = 3071
+}

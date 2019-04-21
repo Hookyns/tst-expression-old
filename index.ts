@@ -1,7 +1,6 @@
-/// <reference path="declarations.d.ts" />
-
-import {ExpressionKind} from "./src/expression-kind"
+import {ExpressionKind, NodeFlags} from "./src/enums"
 
 export {
-	ExpressionKind
+	ExpressionKind,
+	NodeFlags
 };
