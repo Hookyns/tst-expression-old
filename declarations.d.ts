@@ -1,23 +1,37 @@
 /**
  * Expression interface
  */
-type Expression<TType> =
+type Expression<TType> = TType &
 	{
 		/**
 		 * Compiled, executable, expression
 		 */
-		compiled: TType;
+		compiled?: TType;
 
 		/**
 		 * TypeScript expression tree
 		 */
-		expression: ExpressionNode;
+		expression?: ExpressionNode;
 
 		/**
 		 * Context variables
 		 */
-		context: { [key: string]: any };
-	} | TType;
+		context?: { [key: string]: any };
+	};
+
+type ArrowFunctionExpressionNode = ExpressionNode & {
+	body: ExpressionNode;
+	parameters: Array<ExpressionNode>;
+};
+
+type ParameterExpressionNode = ExpressionNode & {
+	name: IdentifierExpressionNode;
+	dotDotDotToken: undefined | ExpressionNode;
+};
+
+type IdentifierExpressionNode = ExpressionNode & {
+	escapedText: string;
+};
 
 declare interface ExpressionNode {
 	kind: import("./src/enums").ExpressionKind;
