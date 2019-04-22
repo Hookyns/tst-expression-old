@@ -21,7 +21,7 @@ type Expression<TType> = TType &
 
 type ArrowFunctionExpressionNode = ExpressionNode & {
 	body: ExpressionNode;
-	parameters: Array<ExpressionNode>;
+	parameters: Array<ParameterExpressionNode>;
 };
 
 type ParameterExpressionNode = ExpressionNode & {
