@@ -7,6 +7,7 @@
   "repository": "https://github.com/Hookyns/exprtree",
   "files": [
     "src/**/*.js",
+    "src/**/*.d.ts",
     "index.js",
     "index.d.ts",
     "declarations.d.ts"
