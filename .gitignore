@@ -1,5 +1,10 @@
 .idea
 
+**/*.js
+**/*.d.ts
+**/*.map
+!declarations.d.ts
+
 # Logs
 logs
 *.log

@@ -19,16 +19,32 @@ type Expression<TType> = TType &
 		context?: { [key: string]: any };
 	};
 
+/**
+ * Realtime expression type
+ * @description Need distinguish behavior for compiled and runtime expressions. Maybe this will change - decorator can be used.
+ */
+type RuntimeExpression<TType> = Expression<TType>;
+
+// noinspection JSUnusedGlobalSymbols
+/**
+ * Expression node of ArrowFunction
+ */
 type ArrowFunctionExpressionNode = ExpressionNode & {
 	body: ExpressionNode;
 	parameters: Array<ParameterExpressionNode>;
 };
 
+/**
+ * Expression node of function parameter
+ */
 type ParameterExpressionNode = ExpressionNode & {
 	name: IdentifierExpressionNode;
 	dotDotDotToken: undefined | ExpressionNode;
 };
 
+/**
+ * Expression node of identifier
+ */
 type IdentifierExpressionNode = ExpressionNode & {
 	escapedText: string;
 };
@@ -50,5 +66,6 @@ declare module NodeJS
 	interface Global
 	{
 		Expression: Expression<any>
+		RealtimeExpression: RuntimeExpression<any>
 	}
 }

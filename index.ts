@@ -1,6 +1,7 @@
-import {ExpressionKind, NodeFlags} from "./src/enums"
+import { ExpressionKind, ModifierFlags, NodeFlags } from "./src/enums"
 
 export {
 	ExpressionKind,
-	NodeFlags
+	NodeFlags,
+	ModifierFlags
 };

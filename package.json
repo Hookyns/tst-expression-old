@@ -23,5 +23,8 @@
     "runtime"
   ],
   "author": "Roman Jámbor",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "glob": "^7.1.4"
+  }
 }
