@@ -5,6 +5,8 @@
 **/*.map
 !declarations.d.ts
 
+/tsconfig.tsbuildinfo
+
 # Logs
 logs
 *.log
