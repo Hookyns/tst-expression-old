@@ -91,3 +91,12 @@ export function isNumericLiteral(node: ExpressionNode): node is nodes.NumericLit
 	return node.kind == ExpressionKind.NumericLiteral;
 }
 
+/**
+ * Type guard validation that expression is ParenthesizedExpressionNode
+ * @param node
+ */
+export function isParenthesizedExpression(node: ExpressionNode): node is nodes.ParenthesizedExpressionNode
+{
+	return node.kind == ExpressionKind.ParenthesizedExpression;
+}
+
