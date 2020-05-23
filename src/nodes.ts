@@ -3,7 +3,7 @@ import {ExpressionKind} from "./enums";
 /**
  * Expression node of ArrowFunction
  */
-type ArrowFunctionExpressionNode = ExpressionNode & {
+export type ArrowFunctionExpressionNode = ExpressionNode & {
 	body: ExpressionNode;
 	parameters: Array<ParameterExpressionNode>;
 };
@@ -11,7 +11,7 @@ type ArrowFunctionExpressionNode = ExpressionNode & {
 /**
  * Expression node of function parameter
  */
-type ParameterExpressionNode = ExpressionNode & {
+export type ParameterExpressionNode = ExpressionNode & {
 	name: IdentifierExpressionNode;
 	dotDotDotToken: undefined | ExpressionNode;
 };
@@ -19,14 +19,14 @@ type ParameterExpressionNode = ExpressionNode & {
 /**
  * Expression node of identifier
  */
-type IdentifierExpressionNode = ExpressionNode & {
+export type IdentifierExpressionNode = ExpressionNode & {
 	escapedText: string;
 };
 
 /**
  * Expression node of property access
  */
-type PropertyAccessExpressionNode = ExpressionNode & {
+export type PropertyAccessExpressionNode = ExpressionNode & {
 	expression: PropertyAccessExpressionNode | IdentifierExpressionNode | NonNullExpressionNode | ElementAccessExpressionNode;
 	name: IdentifierExpressionNode;
 	questionDotToken?: ExpressionNode;
@@ -35,7 +35,7 @@ type PropertyAccessExpressionNode = ExpressionNode & {
 /**
  * Expression node of element access
  */
-type ElementAccessExpressionNode = ExpressionNode & {
+export type ElementAccessExpressionNode = ExpressionNode & {
 	expression: PropertyAccessExpressionNode | IdentifierExpressionNode | NonNullExpressionNode | ElementAccessExpressionNode;
 	argumentsExpression: ExpressionNode;
 	questionDotToken?: ExpressionNode;
@@ -44,7 +44,7 @@ type ElementAccessExpressionNode = ExpressionNode & {
 /**
  * Expression node of binary expression
  */
-type BinaryExpressionNode = ExpressionNode & {
+export type BinaryExpressionNode = ExpressionNode & {
 	left: ExpressionNode;
 	right: ExpressionNode;
 	operatorToken: ExpressionNode;
@@ -53,7 +53,7 @@ type BinaryExpressionNode = ExpressionNode & {
 /**
  * Expression node of prefix unary expression
  */
-type PrefixUnaryExpressionNode = ExpressionNode & {
+export type PrefixUnaryExpressionNode = ExpressionNode & {
 	operator: ExpressionKind;
 	operand: ExpressionNode;
 };
@@ -61,7 +61,7 @@ type PrefixUnaryExpressionNode = ExpressionNode & {
 /**
  * Expression node of call expression
  */
-type CallExpressionNode = ExpressionNode & {
+export type CallExpressionNode = ExpressionNode & {
 	expression: ExpressionNode;
 	questionDotToken?: ExpressionNode;
 	arguments: Array<ExpressionNode>
@@ -70,27 +70,27 @@ type CallExpressionNode = ExpressionNode & {
 /**
  * Expression node of string literal
  */
-type StringLiteralNode = ExpressionNode & {
+export type StringLiteralNode = ExpressionNode & {
 	text: string;
 };
 
 /**
  * Expression node of numeric literal
  */
-type NumericLiteralNode = ExpressionNode & {
+export type NumericLiteralNode = ExpressionNode & {
 	text: string;
 };
 
 /**
  * Expression node of non-null expression "!."
  */
-type NonNullExpressionNode = ExpressionNode & {
+export type NonNullExpressionNode = ExpressionNode & {
 	expression: ExpressionNode
 };
 
 /**
  * Expression node of parenthesis
  */
-type ParenthesizedExpressionNode = ExpressionNode & {
+export type ParenthesizedExpressionNode = ExpressionNode & {
 	expression: ExpressionNode
 };
