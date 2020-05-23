@@ -2,6 +2,7 @@
 
 **/*.js
 **/*.d.ts
+!src/nodes.d.ts
 **/*.map
 !declarations.d.ts
 

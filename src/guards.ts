@@ -38,6 +38,15 @@ export function isPropertyAccessExpression(node: ExpressionNode): node is nodes.
 }
 
 /**
+ * Type guard validation that expression is ElementAccessExpressionNode
+ * @param node
+ */
+export function isElementAccessExpression(node: ExpressionNode): node is nodes.ElementAccessExpressionNode
+{
+	return node.kind == ExpressionKind.ElementAccessExpression;
+}
+
+/**
  * Type guard validation that expression is NonNullExpressionNode
  * @param node
  */
