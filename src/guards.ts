@@ -1,11 +1,11 @@
-import * as types       from "../declarations";
+import * as nodes from "./nodes";
 import {ExpressionKind} from "./enums";
 
 /**
  * Type guard validation that expression is IdentifierExpressionNode
  * @param node
  */
-export function isIdentifierExpression(node: types.ExpressionNode): node is types.IdentifierExpressionNode
+export function isIdentifierExpression(node: ExpressionNode): node is nodes.IdentifierExpressionNode
 {
 	return node.kind == ExpressionKind.Identifier;
 }
@@ -14,7 +14,7 @@ export function isIdentifierExpression(node: types.ExpressionNode): node is type
  * Type guard validation that expression is ArrowFunctionExpressionNode
  * @param node
  */
-export function isArrowFunctionExpression(node: types.ExpressionNode): node is types.ArrowFunctionExpressionNode
+export function isArrowFunctionExpression(node: ExpressionNode): node is nodes.ArrowFunctionExpressionNode
 {
 	return node.kind == ExpressionKind.ArrowFunction;
 }
@@ -23,7 +23,7 @@ export function isArrowFunctionExpression(node: types.ExpressionNode): node is t
  * Type guard validation that expression is ParameterExpressionNode
  * @param node
  */
-export function isParameterExpression(node: types.ExpressionNode): node is types.ParameterExpressionNode
+export function isParameterExpression(node: ExpressionNode): node is nodes.ParameterExpressionNode
 {
 	return node.kind == ExpressionKind.Parameter;
 }
@@ -32,7 +32,7 @@ export function isParameterExpression(node: types.ExpressionNode): node is types
  * Type guard validation that expression is PropertyAccessExpressionNode
  * @param node
  */
-export function isPropertyAccessExpression(node: types.ExpressionNode): node is types.PropertyAccessExpressionNode
+export function isPropertyAccessExpression(node: ExpressionNode): node is nodes.PropertyAccessExpressionNode
 {
 	return node.kind == ExpressionKind.PropertyAccessExpression;
 }
@@ -41,7 +41,7 @@ export function isPropertyAccessExpression(node: types.ExpressionNode): node is 
  * Type guard validation that expression is NonNullExpressionNode
  * @param node
  */
-export function isNonNullExpression(node: types.ExpressionNode): node is types.NonNullExpressionNode
+export function isNonNullExpression(node: ExpressionNode): node is nodes.NonNullExpressionNode
 {
 	return node.kind == ExpressionKind.NonNullExpression;
 }
@@ -50,7 +50,7 @@ export function isNonNullExpression(node: types.ExpressionNode): node is types.N
  * Type guard validation that expression is BinaryExpressionNode
  * @param node
  */
-export function isBinaryExpression(node: types.ExpressionNode): node is types.BinaryExpressionNode
+export function isBinaryExpression(node: ExpressionNode): node is nodes.BinaryExpressionNode
 {
 	return node.kind == ExpressionKind.BinaryExpression;
 }
@@ -59,7 +59,7 @@ export function isBinaryExpression(node: types.ExpressionNode): node is types.Bi
  * Type guard validation that expression is PrefixUnaryExpressionNode
  * @param node
  */
-export function isPrefixUnaryExpression(node: types.ExpressionNode): node is types.PrefixUnaryExpressionNode
+export function isPrefixUnaryExpression(node: ExpressionNode): node is nodes.PrefixUnaryExpressionNode
 {
 	return node.kind == ExpressionKind.PrefixUnaryExpression;
 }
@@ -68,7 +68,7 @@ export function isPrefixUnaryExpression(node: types.ExpressionNode): node is typ
  * Type guard validation that expression is CallExpressionNode
  * @param node
  */
-export function isCallExpression(node: types.ExpressionNode): node is types.CallExpressionNode
+export function isCallExpression(node: ExpressionNode): node is nodes.CallExpressionNode
 {
 	return node.kind == ExpressionKind.CallExpression;
 }
@@ -77,7 +77,7 @@ export function isCallExpression(node: types.ExpressionNode): node is types.Call
  * Type guard validation that expression is StringLiteralNode
  * @param node
  */
-export function isStringLiteral(node: types.ExpressionNode): node is types.StringLiteralNode
+export function isStringLiteral(node: ExpressionNode): node is nodes.StringLiteralNode
 {
 	return node.kind == ExpressionKind.StringLiteral;
 }
@@ -86,7 +86,7 @@ export function isStringLiteral(node: types.ExpressionNode): node is types.Strin
  * Type guard validation that expression is NumericLiteralNode
  * @param node
  */
-export function isNumericLiteral(node: types.ExpressionNode): node is types.NumericLiteralNode
+export function isNumericLiteral(node: ExpressionNode): node is nodes.NumericLiteralNode
 {
 	return node.kind == ExpressionKind.NumericLiteral;
 }
