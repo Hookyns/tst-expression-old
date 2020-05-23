@@ -1,3 +1,5 @@
+import {ExpressionKind} from "./src/enums";
+
 /**
  * Expression interface
  */
@@ -48,6 +50,60 @@ type ParameterExpressionNode = ExpressionNode & {
 type IdentifierExpressionNode = ExpressionNode & {
 	escapedText: string;
 };
+
+/**
+ * Expression node of property access
+ */
+type PropertyAccessExpressionNode = ExpressionNode & {
+	expression: PropertyAccessExpressionNode | IdentifierExpressionNode | NonNullExpressionNode | ExpressionNode;
+	name: IdentifierExpressionNode;
+	questionDotToken?: ExpressionNode;
+};
+
+/**
+ * Expression node of binary expression
+ */
+type BinaryExpressionNode = ExpressionNode & {
+	left: ExpressionNode;
+	right: ExpressionNode;
+	operatorToken: ExpressionNode;
+};
+
+/**
+ * Expression node of prefix unary expression
+ */
+type PrefixUnaryExpressionNode = ExpressionNode & {
+	operator: ExpressionKind;
+	operand: ExpressionNode;
+};
+
+/**
+ * Expression node of call expression
+ */
+type CallExpressionNode = ExpressionNode & {
+	expression: ExpressionNode;
+	questionDotToken?: ExpressionNode;
+	arguments: Array<ExpressionNode>
+};
+
+/**
+ * Expression node of string literal
+ */
+type StringLiteralNode = ExpressionNode & {
+	text: string;
+};
+
+/**
+ * Expression node of numeric literal
+ */
+type NumericLiteralNode = ExpressionNode & {
+	text: string;
+};
+
+/**
+ * Expression node of non-null expression "!."
+ */
+type NonNullExpressionNode = ExpressionNode;
 
 declare interface ExpressionNode {
 	kind: import("./src/enums").ExpressionKind;
