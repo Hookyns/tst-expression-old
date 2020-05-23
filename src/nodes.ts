@@ -37,7 +37,7 @@ export type PropertyAccessExpressionNode = ExpressionNode & {
  */
 export type ElementAccessExpressionNode = ExpressionNode & {
 	expression: PropertyAccessExpressionNode | IdentifierExpressionNode | NonNullExpressionNode | ElementAccessExpressionNode;
-	argumentsExpression: ExpressionNode;
+	argumentExpression: ExpressionNode;
 	questionDotToken?: ExpressionNode;
 };
 
