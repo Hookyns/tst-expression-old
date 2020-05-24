@@ -109,3 +109,39 @@ export function isParenthesizedExpression(node: ExpressionNode): node is nodes.P
 	return node.kind == ExpressionKind.ParenthesizedExpression;
 }
 
+/**
+ * Type guard validation that expression is ObjectLiteralExpressionNode
+ * @param node
+ */
+export function isObjectLiteralExpression(node: ExpressionNode): node is nodes.ObjectLiteralExpressionNode
+{
+	return node.kind == ExpressionKind.ObjectLiteralExpression;
+}
+
+/**
+ * Type guard validation that expression is PropertyAssignmentExpressionNode
+ * @param node
+ */
+export function isPropertyAssignmentExpression(node: ExpressionNode): node is nodes.PropertyAssignmentExpressionNode
+{
+	return node.kind == ExpressionKind.PropertyAssignment;
+}
+
+/**
+ * Type guard validation that expression is ShorthandPropertyAssignmentExpressionNode
+ * @param node
+ */
+export function isShorthandPropertyAssignmentExpression(node: ExpressionNode): node is nodes.ShorthandPropertyAssignmentExpressionNode
+{
+	return node.kind == ExpressionKind.ShorthandPropertyAssignment;
+}
+
+/**
+ * Type guard validation that expression is SpreadAssignmentExpressionNode
+ * @param node
+ */
+export function isSpreadAssignmentExpression(node: ExpressionNode): node is nodes.SpreadAssignmentExpressionNode
+{
+	return node.kind == ExpressionKind.SpreadAssignment;
+}
+
