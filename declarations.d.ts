@@ -1,3 +1,5 @@
+import { ExpressionKind, NodeFlags } from "./src/enums";
+
 /**
  * Expression interface
  */
@@ -26,8 +28,8 @@ type Expression<TType> = TType &
 type RuntimeExpression<TType> = Expression<TType>;
 
 declare interface ExpressionNode {
-	kind: import("./src/enums").ExpressionKind;
-	flags: import("./src/enums").NodeFlags;
+	kind: ExpressionKind;
+	flags: NodeFlags;
 	// decorators?: Array<Decorator>;
 	// modifiers?: ModifiersArray;
 }
